@@ -1,0 +1,36 @@
+# Build artifacts
+build/
+out/
+tmp/
+dl/
+sstate-cache/
+deploy/
+images/
+*.img
+*.wic*
+*.sdcard
+*.bin
+*.elf
+*.map
+*.o
+*.ko
+*.dtb
+*.itb
+*.cpio*
+*.tar.*
+*.log
+*.pcap
+
+# Editor/OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Python
+__pycache__/
+.venv/
+
+# Logic analyzer raw (keep exports under hardware/logic_analyzer/exports)
+hardware/logic_analyzer/raw/
