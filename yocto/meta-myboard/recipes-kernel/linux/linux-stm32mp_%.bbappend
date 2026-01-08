@@ -2,7 +2,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}/${PV}:"
 
 # source patch DT
 SRC_URI:append = " \
-  file://0001-stm32mp257f-dk-add-bme280-i2c0-0x76.patch \
+  file://0001-arm64-dts-stm32mp257f-dk-add-bme280-on-i2c2-0x76.patch \
 "
 
 # config

@@ -1,0 +1,28 @@
+From 57621d50d5966f291813a5ae99866db6c557475b Mon Sep 17 00:00:00 2001
+From: pingu52 <gudrbs9852@gmail.com>
+Date: Thu, 8 Jan 2026 14:39:46 +0900
+Subject: [PATCH] arm64: dts: stm32mp257f-dk: add bme280 on i2c2@0x76
+
+---
+ arch/arm64/boot/dts/st/stm32mp257f-dk.dts | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/st/stm32mp257f-dk.dts b/arch/arm64/boot/dts/st/stm32mp257f-dk.dts
+index 88bafebef..28682b912 100644
+--- a/arch/arm64/boot/dts/st/stm32mp257f-dk.dts
++++ b/arch/arm64/boot/dts/st/stm32mp257f-dk.dts
+@@ -338,6 +338,11 @@ &i2c2 {
+ 	/delete-property/dmas;
+ 	/delete-property/dma-names;
+ 
++	bme280@76 {
++		compatible = "boshe,bme280";
++		reg = <0x76>;
++	};
++
+ 	imx335: camera@1a {
+ 		compatible = "sony,imx335";
+ 		reg = <0x1a>;
+-- 
+2.43.0
+
