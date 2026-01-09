@@ -1,0 +1,27 @@
+From 6394df76bea6dee7c4bcfbc7431d6ed04355095d Mon Sep 17 00:00:00 2001
+From: pingu52 <gudrbs9852@gmail.com>
+Date: Thu, 8 Jan 2026 21:56:37 +0900
+Subject: [PATCH 2/2] arm64: dts: stm32mp257f-dk: wire bme280 vdda/vddd to
+ scmi_v3v3
+
+---
+ arch/arm64/boot/dts/st/stm32mp257f-dk.dts | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/st/stm32mp257f-dk.dts b/arch/arm64/boot/dts/st/stm32mp257f-dk.dts
+index 28682b912..a109c561d 100644
+--- a/arch/arm64/boot/dts/st/stm32mp257f-dk.dts
++++ b/arch/arm64/boot/dts/st/stm32mp257f-dk.dts
+@@ -341,6 +341,9 @@ &i2c2 {
+ 	bme280@76 {
+ 		compatible = "boshe,bme280";
+ 		reg = <0x76>;
++
++		vdda-supply = <&scmi_v3v3>;
++		vddd-supply = <&scmi_v3v3>;
+ 	};
+ 
+ 	imx335: camera@1a {
+-- 
+2.43.0
+
